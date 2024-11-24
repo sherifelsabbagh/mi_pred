@@ -7,6 +7,8 @@ with open("rf_model.pkl", 'rb') as file:
     model = pickle.load(file)
 
 # Define the app layout
+st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSByQqTdmeNAG0Fhb7TAVN2X8BM9BOX6g0A0g&s")
+
 st.title("Heart Disease Prediction App")
 
 st.write("""
