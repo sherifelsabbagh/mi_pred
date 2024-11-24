@@ -9,10 +9,10 @@ with open("rf_model.pkl", 'rb') as file:
 # Define the app layout
 st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSByQqTdmeNAG0Fhb7TAVN2X8BM9BOX6g0A0g&s")
 
-st.title("Heart Disease Prediction App")
+st.title("Hep-C Cirrhosis Prediction App")
 
 st.write("""
-This app predicts the likelihood of a heart disease based on various input features.
+This app can be used to detect the presence of cirrhosis in hepatitis C patients.
 """)
 
 # Collect user inputs for the features you used in your model
