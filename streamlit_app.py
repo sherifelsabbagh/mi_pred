@@ -6,6 +6,8 @@ from sklearn.preprocessing import MinMaxScaler
 # Load your pre-trained model
 with open("rf_model.pkl", 'rb') as file:
     model = pickle.load(file)
+with open('scaler.pkl', 'rb') as f:
+    scaler = pickle.load(f)
 
 # Define the app layout
 st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSByQqTdmeNAG0Fhb7TAVN2X8BM9BOX6g0A0g&s")
@@ -44,12 +46,12 @@ BHG = st.number_input("Baseline Histological Grading")
 
 # Prepare input data for the model
 
-s = MinMaxScaler()
+
 input_data = np.array([[
     age, gender,BMI, Fever ,NV, Head,Dia, Fatigue,J, EGP, WBC, RBC, HGB, Plat, AST, ALT, RNA, BHG
 ]])
 
-input_data = s.fit_transform(input_data)
+input_data = scaler.transform(input_data)
 
 # Make prediction
 if st.button("Predict Cirrhosis risk"):
