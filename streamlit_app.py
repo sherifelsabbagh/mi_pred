@@ -19,19 +19,19 @@ This app can be used to detect the presence of cirrhosis in hepatitis C patients
 # Collect user inputs for the features you used in your model
 age = st.number_input("Age", min_value=0, max_value=120)
 
-gender = st.selectbox("Gender", ["0", "1"])
-st.write("Male= 0, Female=1")
+gender = st.selectbox("Gender", ["1", "2"])
+st.write("Male= 1, Female=2")
 
 BMI = st.number_input("Body mass index (BMI)", min_value=0, max_value=500)
 
-Fever = st.selectbox("Fever", ["0", "1"])
+Fever = st.selectbox("Fever", ["1", "2"])
 
-NV = st.selectbox("Nausea/Vomiting", ["0", "1"])
-Head = st.selectbox("Headache", ["0", "1"])
-Dia = st.selectbox("Diarrhea", ["0", "1"])
-Fatigue = st.selectbox("Fatigue", ["0", "1"])
-J = st.selectbox("Jaundice", ["0", "1"])
-EGP  =  st.selectbox("Epigastric pain", ["0", "1"])
+NV = st.selectbox("Nausea/Vomiting",  ["1", "2"])
+Head = st.selectbox("Headache",  ["1", "2"])
+Dia = st.selectbox("Diarrhea",  ["1", "2"])
+Fatigue = st.selectbox("Fatigue", ["1", "2"])
+J = st.selectbox("Jaundice",  ["1", "2"])
+EGP  =  st.selectbox("Epigastric pain",  ["1", "2"])
 
 WBC = st.number_input("WBC count")
 RBC = st.number_input("RBC count")
