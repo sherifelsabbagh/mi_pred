@@ -19,7 +19,15 @@ This app can be used to detect the presence of cirrhosis in hepatitis C patients
 age = st.number_input("Age", min_value=0, max_value=120)
 
 gender = st.selectbox("Gender", ["0", "1"])
-st.write("Male= 1, Female=0")
+st.write("Male= 0, Female=1")
+
+BMI = st.number_input("Body mass index (BMI)", min_value=0, max_value=500)
+
+Fever = st.selectbox("Fever", ["0", "1"])
+
+NV = st.selectbox("Nausea/Vomiting", ["0", "1"])
+
+
 
 cp = st.selectbox("Chest Pain type", ["0", "1","2","	3"])
 
