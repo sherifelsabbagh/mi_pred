@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 import numpy as np
+from sklearn.preprocessing import MinMaxScaler
 
 # Load your pre-trained model
 with open("rf_model.pkl", 'rb') as file:
@@ -42,9 +43,13 @@ RNA = st.number_input("RNA count")
 BHG = st.number_input("Baseline Histological Grading")
 
 # Prepare input data for the model
+
+s = MinMaxScaler()
 input_data = np.array([[
     age, gender,BMI, Fever ,NV, Head,Dia, Fatigue,J, EGP, WBC, RBC, HGB, Plat, AST, ALT, RNA, BHG
 ]])
+
+input_data = s.fit_transform(input_data)
 
 # Make prediction
 if st.button("Predict Cirrhosis risk"):
